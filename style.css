@@ -1,0 +1,43 @@
+/* my reset css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* my styling starts here */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    border: solid red;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.container > div {
+    border: solid mediumslateblue;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.container div:nth-child(2) {
+    grid-area: 1/2/2/4;
+    background: mediumslateblue;
+}
+.container div:nth-child(6) {
+    grid-area: 2/3/3/5;
+    background: green;
+}
+.container div:nth-child(9) {
+    grid-area: 3/2/5/3;
+    background: orange;
+}
+.container div:nth-child(10) {
+    grid-area: 3/4/5/5;
+    background: magenta;
+}
